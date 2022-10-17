@@ -1,4 +1,4 @@
-package com.study.Ex04SpringDI;
+package com.study.springboot;
 
 //회원정보 클래스
 public class Member {

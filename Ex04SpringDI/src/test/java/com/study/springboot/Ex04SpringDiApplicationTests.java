@@ -1,4 +1,4 @@
-package com.study.Ex04SpringDI;
+package com.study.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
