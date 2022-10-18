@@ -14,6 +14,10 @@ public class Ex04SpringDiApplication {
 		Member member = (Member)context.getBean("member");
 		System.out.println( "ApplicationContext에서 찾은 빈 : " + member.getName() );
 
+		Member member2 = (Member)context.getBean("member");
+		System.out.println( "member : " + member );
+		System.out.println( "member2 : " + member2 );
+
 		SpringApplication.run(Ex04SpringDiApplication.class, args);
 	}
 
