@@ -9,7 +9,7 @@ public class AppConfig {
     @Bean
     public Member member(){
         System.out.println("AppConfig.member 빈으로 등록됨.");
-        return new Member("머스커");
+        return new Member("머스크");
     }
 
 }
