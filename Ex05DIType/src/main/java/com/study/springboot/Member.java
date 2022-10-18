@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 public class Member {
     private String name = "사임당";
 
-    
     public Member() {
     }
 
