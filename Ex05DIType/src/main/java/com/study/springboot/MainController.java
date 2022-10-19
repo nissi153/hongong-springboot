@@ -21,9 +21,7 @@ public class MainController {
     @GetMapping("/field")
     @ResponseBody
     public String field(){
-
         System.out.println( member1.getName() );
-
         return "field() 호출됨.";
     }
 
@@ -38,7 +36,6 @@ public class MainController {
     @GetMapping("/setter")
     @ResponseBody
     public String setter(){
-
         System.out.println( member2.getName() );
         return "setter() 호출됨.";
     }
