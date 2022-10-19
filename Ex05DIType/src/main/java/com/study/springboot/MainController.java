@@ -53,6 +53,6 @@ public class MainController {
     @ResponseBody
     public String constructor(){
         System.out.println( member3.getName() );
-        return "constructor() 호출됨.";
+        return "constructor() 호출됨.456";
     }
 }
