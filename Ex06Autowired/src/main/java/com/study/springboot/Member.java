@@ -10,7 +10,7 @@ public class Member {
     private String name;
     private ICard iCard;
 
-    //기본생성자 안만들어주면 Bean 등록이 안됨.
+    //기본생성자 안 만들어주면 Bean 등록이 안됨.
     public Member(){
 
     }
