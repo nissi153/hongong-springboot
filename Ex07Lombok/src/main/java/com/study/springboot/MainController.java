@@ -1,11 +1,12 @@
 package com.study.springboot;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequiredArgsConstructor
 public class MainController {
 
     @GetMapping("/")
@@ -16,9 +17,10 @@ public class MainController {
 
     private final Member member;
 
-    @Autowired
-    public MainController(Member member) {
-        this.member = member;
-    }
-
+    //<삭제된 부분
+    //@Autowired
+    //public MainController(Member member) {
+    //    this.member = member;
+    //}
+    //삭제된 부분>
 }
