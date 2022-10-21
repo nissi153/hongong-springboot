@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index1.html</title>
+</head>
+<body>
+<h2>index1.html입니다.</h2>
+
+<p th:text="${ name }">name값을 innerText표현으로 출력</p>
+
+<p th:utext="${ name_h1 }">name값을 innerHtml표현으로 출력</p>
+
+<p th:text="'Welcome, ' + ${ name }">문자열 연결</p>
+
+<p th:text="|Welcome, ${ name }|">치환처리</p>
+
+입력태그 값으로 넣어주기<br>
+<input type="text" th:value="${ value }" /><br><br>
+
+변수값으로 출력<br>
+<div th:with="temp=${ var }" th:text="${temp}">name값을 temp 변수에 넣어서 출력</div><br>
+
+</body>
+</html>
