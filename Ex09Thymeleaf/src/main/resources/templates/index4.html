@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>index2.html</title>
+</head>
+<body>
+<h2>타임리프 조건과 반복 처리</h2>
+
+<p th:if="${ web }=='web'" th:text="${ web }"></p>
+<p th:unless="unless"></p>
+
+<!-- * : java switch의 default역할 -->
+<div th:switch="${ role }">
+  <p th:case="'admin'">User is an administrator
+  <p th:case="'manager'">User is a manager
+  <p th:case="*">User is a manager
+</div>
+<br><br>
+
+
+</body>
+</html>
