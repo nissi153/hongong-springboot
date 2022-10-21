@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index2.html</title>
+</head>
+<body>
+<h2>타임리프 표현 형식</h2>
+
+<p th:text="${#dates.format(standardDate, 'yyyy/MM/dd HH:mm:ss')}"></p>
+<p th:text="${#temporals.format(localDate, 'yyyy/MM/dd HH:mm:ss')}"></p>
+<p th:text="${#temporals.format(localDateTime, 'yyyy/MM/dd HH:mm:ss')}"></p>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>index2.html</title>
+</head>
+<body>
+<h2>타임리프 null 체크하기</h2>
+
+<th:block th:if="${address_null == null}">
+  <p>address_null은 null입니다.</p>
+</th:block>
+<th:block th:unless="${address_null == null}">
+  <p>address_null은 null이 아닙니다.</p>
+</th:block>
+
+<p th:text="${ address_null } ?: 'address_null은 null입니다.'">삼항연산자</p>
+
+<p th:text="${#strings.defaultString(address_null, 'address_null은 null입니다.')}">defaultString</p>
+
+<p th:if="${#strings.isEmpty(address_empty)}" th:text="|address_empty은 emtpy입니다.|"></p>
+<p th:if="${not #strings.isEmpty(address_empty)}" th:text="|address_empty은 emtpy가 아닙니다.|"></p>
+
+</body>
+</html>

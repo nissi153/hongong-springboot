@@ -5,21 +5,20 @@
     <title>index1.html</title>
 </head>
 <body>
-<h2>index1.html입니다.</h2>
+<h2>타임리프 변수값 출력</h2>
 
-<p th:text="${ name }">name값을 innerText표현으로 출력</p>
+<p th:text="${ name }">innerText 출력</p>
 
-<p th:utext="${ name_h1 }">name값을 innerHtml표현으로 출력</p>
+<p th:utext="${ name_html }">innerHtml 출력</p>
 
 <p th:text="'Welcome, ' + ${ name }">문자열 연결</p>
 
-<p th:text="|Welcome, ${ name }|">치환처리</p>
+<p th:text="|Welcome, ${ name }|">치환</p>
 
-입력태그 값으로 넣어주기<br>
-<input type="text" th:value="${ value }" /><br><br>
+value속성에 값 넣기<br>
+<input type="text" th:value="${ value }" /><br>
 
-변수값으로 출력<br>
-<div th:with="temp=${ var }" th:text="${temp}">name값을 temp 변수에 넣어서 출력</div><br>
+<p th:with="temp=${ var }" th:text="${ temp }">temp 변수에 넣어서 출력</p>
 
 </body>
 </html>
