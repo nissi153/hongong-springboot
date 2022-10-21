@@ -2,18 +2,18 @@ package com.study.springboot;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
 
-	@RequestMapping("/")
-	public String root() {
+	@GetMapping("/")
+	public String main() {
 		return "redirect:index1";
 	}
 	
-	@RequestMapping("/index1")
-	public String index(Model model) {
+	@GetMapping("/index1")
+	public String index1(Model model) {
 		
 		model.addAttribute("name", "홍길동");
 		model.addAttribute("name_h1", "<h2 style='color:red;'>홍길동</h2>");
