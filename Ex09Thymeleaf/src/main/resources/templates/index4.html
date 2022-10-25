@@ -2,19 +2,30 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>index2.html</title>
+  <title>index4.html</title>
 </head>
 <body>
 <h2>타임리프 조건과 반복 처리</h2>
 
-<p th:if="${ web }=='web'" th:text="${ web }"></p>
-<p th:unless="unless"></p>
+<!--if( 조건절 )-->
+<p th:if="${ role }=='admin'" th:text="'사용자는 관리자입니다.'"><p>
+<!--if( ! 조건절 )-->
+<p th:unless="${ role }=='admin'" th:text="'사용자는 관리자가 아닙니다.'"></p>
+
+<!--if( 조건절 )-->
+<th:block th:if="${ role }=='admin'">
+  사용자는 관리자입니다.
+</th:block>
+<!--if( ! 조건절 )-->
+<th:block th:unless="${ role }=='admin'">
+  사용자는 관리자가 아닙니다.
+</th:block>
 
 <!-- * : java switch의 default역할 -->
 <div th:switch="${ role }">
-  <p th:case="'admin'">User is an administrator
-  <p th:case="'manager'">User is a manager
-  <p th:case="*">User is a manager
+  <p th:case="'admin'">사용자는 관리자입니다.
+  <p th:case="'guest'">사용자는 손님입니다.
+  <p th:case="*">사용자는 그외 권한입니다.
 </div>
 <br><br>
 
