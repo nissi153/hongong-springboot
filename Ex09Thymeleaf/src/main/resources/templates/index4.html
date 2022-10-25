@@ -21,12 +21,13 @@
   사용자는 관리자가 아닙니다.
 </th:block>
 
-<!-- * : java switch의 default역할 -->
 <div th:switch="${ role }">
-  <p th:case="'admin'">사용자는 관리자입니다.
-  <p th:case="'guest'">사용자는 손님입니다.
-  <p th:case="*">사용자는 그외 권한입니다.
+  <p th:case="'admin'">사용자는 관리자입니다.</p>
+  <p th:case="'guest'">사용자는 손님입니다.</p>
+  <!-- * : java switch의 default역할 -->
+  <p th:case="*">사용자는 그외 권한입니다.</p>
 </div>
+
 <br><br>
 
 
