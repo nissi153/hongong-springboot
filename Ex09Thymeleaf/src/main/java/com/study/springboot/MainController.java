@@ -59,8 +59,6 @@ public class MainController {
 		return "index4"; //index4.html로 응답함.
 	}
 
-	//https://indra818.github.io/2017/11/23/thymeleaf-tag-reference/
-
 	@GetMapping("index5")
 	public String index5(Model model) {
 
