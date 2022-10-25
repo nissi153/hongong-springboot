@@ -3,6 +3,7 @@ package com.study.springboot;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -73,4 +74,15 @@ public class MainController {
 
 		return "index5"; //index5.html로 응답함.
 	}
+
+	@GetMapping("/index6")
+	public String index6() {
+		return "index6"; //index6.html로 응답함.
+	}
+
+	@GetMapping("/index7")
+	public String index7() {
+		return "index7"; //index7.html로 응답함.
+	}
+
 }
