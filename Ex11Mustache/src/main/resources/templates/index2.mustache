@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>머스테치 실습</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+    <h2>머스테치 null 체크하기</h2>
+
+    <p>당신의 주소는 {{ address }}입니다.</p>
+    <hr>
+
+    문자열의 길이는 {{ address.length }}  입니다.<br>
+    <hr>
+
+    #을 붙이면 null이 아닐때 출력됨.<br>
+    {{# address }}
+    <p>address가 null이 아닙니다. </p>
+    {{/ address }}
+    <hr>
+
+    ^을 붙이면 null일때 출력됨.<br>
+    {{^ address }}
+    <p>address가 null입니다. </p>
+    {{/ address }}
+    <hr>
+
+    ^을 붙이면 null일때 출력됨.<br>
+    {{^ address_null }}
+    <p>address_null이 null입니다.<br>
+       또는 undefined, false 또는 0, NaN, 빈 문자열, 빈 리스트입니다.<p>
+    {{/ address_null }}
+    <hr>
+
+    #을 붙이면 빈 문자열일 때 출력됨.<br>
+    {{# address_empty }}
+        <p>address_empty는 빈 문자열입니다.</p>
+    {{/ address_empty }}
+
+</body>
+</html>
