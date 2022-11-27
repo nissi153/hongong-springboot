@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>머스테치 실습</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>머스테치 실습2</title>
 </head>
 <body>
     <h2>머스테치 null 체크하기</h2>
@@ -10,7 +10,7 @@
     <p>당신의 주소는 {{ address }}입니다.</p>
     <hr>
 
-    문자열의 길이는 {{ address.length }}  입니다.<br>
+    문자열의 길이는 {{ address.length }} 입니다.<br>
     <hr>
 
     #을 붙이면 null이 아닐때 출력됨.<br>
@@ -34,6 +34,12 @@
 
     #을 붙이면 빈 문자열일 때 출력됨.<br>
     {{# address_empty }}
+        <p>address_empty는 빈 문자열입니다.</p>
+    {{/ address_empty }}
+    <hr>
+
+    ^을 붙이면 빈 문자열일 때 출력안함.<br>
+    {{^ address_empty }}
         <p>address_empty는 빈 문자열입니다.</p>
     {{/ address_empty }}
 

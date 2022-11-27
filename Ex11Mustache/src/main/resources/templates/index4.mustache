@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>머스테치 실습3</title>
+    <script>
+        function timestamp(){
+            var today = new Date();
+            today.setHours(today.getHours() + 9);
+            return today.toISOString().replace('T', ' ').substring(0, 19);
+        }
+        window.onload = function(){
+         document.write( timestamp() );
+        }
+    </script>
+</head>
+<body>
+<h2>머스테치 표현 형식</h2>
+
+{{ standardDate }}
+<br>
+{{ localDate }}
+<br>
+{{ localDateTime }}
+<br>
+
+{{# member }}
+    {{ id }} <br>
+    {{ username }} <br>
+    {{ password }} <br>
+    {{ joinDate }} <br>
+    {{ joinDateTime }} <br>
+{{/ member }}
+
+</body>
+</html>
